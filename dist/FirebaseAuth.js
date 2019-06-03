@@ -37,10 +37,6 @@ var FirebaseAuth = function (_React$Component) {
   FirebaseAuth.prototype.componentDidMount = function componentDidMount() {
     var _this2 = this;
 
-    require('firebaseui/dist/firebaseui.css');
-
-    var firebaseui = require('firebaseui');
-
     return firebaseUiDeletion.then(function () {
       _this2.firebaseUiWidget = firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(_this2.firebaseAuth);
       if (_this2.uiConfig.signInFlow === 'popup') {
